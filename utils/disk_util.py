@@ -2,9 +2,8 @@ import gzip
 from io import BytesIO
 
 from cassandra.cqltypes import BytesType
-from diskcache import FanoutCache, Disk, core
+from diskcache import FanoutCache, Disk
 from diskcache.core import MODE_BINARY
-from diskcache.core import io
 
 from utils.log_util import logging
 
@@ -82,8 +81,4 @@ class GzipDisk(Disk):
 
 
 def getCache(scope_str):
-    return FanoutCache('cache/' + scope_str,
-                       disk=GzipDisk,
-                       shards=64,
-                       timeout=1,
-                       size_limit=3e11)
+    return FanoutCache('cache/' + scope_str, disk=GzipDisk, shards=64, timeout=1, size_limit=3e11)
