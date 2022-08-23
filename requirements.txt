@@ -1,0 +1,6 @@
+cassandra_driver==3.25.0
+diskcache==5.4.0
+matplotlib==3.4.0
+numpy==1.22.2
+SimpleITK==2.1.1.2
+torch==1.10.2
