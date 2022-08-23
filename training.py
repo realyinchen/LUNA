@@ -83,7 +83,7 @@ class LunaTrainingApp:
         parser.add_argument('comment',
                             help="Comment suffix for Tensorboard run.",
                             nargs='?',
-                            default='dlwpt')
+                            default='luna')
 
         self.cli_args = parser.parse_args(sys_argv)
         self.time_str = datetime.datetime.now().strftime('%Y-%m-%d_%H.%M.%S')
