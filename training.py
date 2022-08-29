@@ -13,7 +13,7 @@ from torch.utils.tensorboard import SummaryWriter
 from models.luna_model import LunaModel
 from utils.log_util import logging
 from utils.training_util import enumerateWithEstimate
-from dataset import LunaDataset
+from dataset.dataset import LunaDataset
 
 log = logging.getLogger(__name__)
 # log.setLevel(logging.WARN)
@@ -245,7 +245,7 @@ class LunaTrainingApp:
         neg_count = int(negLabel_mask.sum())
         pos_count = int(posLabel_mask.sum())
 
-        trueNeg_count = neg_correct = int((negLabel_mask & negPred_mask).sum())
+        neg_correct = int((negLabel_mask & negPred_mask).sum())  # trueNeg_count
         truePos_count = pos_correct = int((posLabel_mask & posPred_mask).sum())
 
         falsePos_count = neg_count - neg_correct
