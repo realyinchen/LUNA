@@ -3,7 +3,7 @@ import sys
 
 from torch.utils.data import DataLoader
 
-from dataset import LunaDataset
+from dataset.dataset import LunaDataset
 from utils.log_util import logging
 from utils.training_util import enumerateWithEstimate
 
