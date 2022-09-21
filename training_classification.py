@@ -79,7 +79,7 @@ class LunaTrainingApp:
 
         parser.add_argument('--tb-prefix',
                             help="Data prefix to use for Tensorboard run.",
-                            default='luna')
+                            default='classification')
         parser.add_argument('comment',
                             help="Comment suffix for Tensorboard run.",
                             nargs='?',
